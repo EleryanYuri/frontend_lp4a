@@ -9,5 +9,6 @@ p{
 }
 button{
     border-radius: 10px;
-    background-color: white;
+    background-color: black;
+    color: white;
 }
