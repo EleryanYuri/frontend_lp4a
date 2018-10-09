@@ -1,0 +1,13 @@
+img{
+    width: 100%
+}
+h2{
+    font-size: 4rem
+}
+p{
+    font-size: 3rem
+}
+button{
+    border-radius: 10px;
+    background-color: white;
+}
