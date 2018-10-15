@@ -1,0 +1,27 @@
+<div class="titre">
+    <h1>{{pizza.name | titlecase}} :</h1>
+  </div>
+<div class="detail">
+  <div class = "col">
+    <table>
+      <tr>
+        <td>
+          <img [src] = 'pizza.url'>
+        </td>
+        <td>
+          <div class ="description">
+            <h3>Description :</h3>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <p>{{pizza.price}}€</p>
+      </tr>
+      <tr>
+        <button class="pay-button">Commander</button>
+        <button class="back-button" (click)="back()">Retour</button>
+      </tr>
+
+    </table>
+  </div>
+</div>

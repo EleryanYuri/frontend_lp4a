@@ -1,0 +1,32 @@
+.detail{
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 6px 6px 4px 2px #BDBDBD;
+  box-shadow: 6px 6px 4px 2px #BDBDBD;
+  background-color: rgba(239, 239, 239, 100);
+
+}
+
+button{
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+.pay-button{
+  background-color: #057DF5;
+}
+
+.back-button{
+  background-color: red;
+}
+
+td{
+  padding-right: 50px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.description{
+
+}

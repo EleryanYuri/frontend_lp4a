@@ -2,7 +2,7 @@
   <div class = "col-8">
     <h2>{{pizza.name}}</h2>
     <p>{{pizza.price}}€</p>
-    <button>Display</button>
+    <button routerLink="/pizzas/{{pizza.id}}">Display</button>
   </div>
   <div class = "col">
     <img [src] = 'pizza.url'>
