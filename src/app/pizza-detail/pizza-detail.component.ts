@@ -4,6 +4,7 @@ import { PizzaService } from '../pizza.service';
 import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
 import { PayPalConfig, PayPalEnvironment, PayPalIntegrationType } from 'ngx-paypal';
+import { OrderService } from '../REST';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class PizzaDetailComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
     private location: Location,
-    private pizzaService: PizzaService
+    private pizzaService: PizzaService,
+    private orderService: OrderService
   ) { }
 
   ngOnInit() {

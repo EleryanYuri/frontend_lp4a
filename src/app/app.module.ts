@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
+import { ApiModule } from './REST';
 
 const appRoutes: Routes = [
   { path: 'pizzas', component: PizzaListComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     NgxPayPalModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
