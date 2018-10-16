@@ -13,12 +13,16 @@ button{
   padding: 10px;
   color: white;
 }
+
 .pay-button{
   background-color: #057DF5;
 }
 
 .back-button{
   background-color: red;
+}
+.back-button:hover{
+  background-color: tomato;
 }
 
 td{
