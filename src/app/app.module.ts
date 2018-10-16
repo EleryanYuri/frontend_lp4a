@@ -12,7 +12,7 @@ import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
 const appRoutes: Routes = [
   { path: 'pizzas', component: PizzaListComponent },
   { path: 'pizzas/:id', component: PizzaDetailComponent },
-  { path: '', component: PizzaListComponent}
+  { path: '', redirectTo: '/pizzas', pathMatch: 'full'}
 ];
 
 @NgModule({
