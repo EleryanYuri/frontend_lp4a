@@ -50,6 +50,7 @@ export class PizzaDetailComponent implements OnInit {
       },
       onPaymentComplete: (data, actions) => {
         console.log('OnPaymentComplete');
+        console.log(data, actions)
       },
       onCancel: (data, actions) => {
         console.log('OnCancel');
