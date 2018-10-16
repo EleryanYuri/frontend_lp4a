@@ -18,8 +18,9 @@
         <p>{{pizza.price}}€</p>
       </tr>
       <tr>
-        <button class="pay-button">Commander</button>
+        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
         <button class="back-button" (click)="back()">Retour</button>
+        
       </tr>
 
     </table>

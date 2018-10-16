@@ -3,6 +3,8 @@ import { Pizza } from '../pizza';
 import { PizzaService } from '../pizza.service';
 import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
+import { PayPalConfig, PayPalEnvironment, PayPalIntegrationType } from 'ngx-paypal';
+
 
 @Component({
   selector: 'app-pizza-detail',
@@ -20,6 +22,7 @@ export class PizzaDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getPizza();
+    this.initConfig();
   }
 
   getPizza(): void {
@@ -32,4 +35,32 @@ export class PizzaDetailComponent implements OnInit {
     this.location.back();
   }
 
+  public payPalConfig?: PayPalConfig;
+
+  private initConfig(): void {
+    this.payPalConfig = new PayPalConfig(PayPalIntegrationType.ClientSideREST, PayPalEnvironment.Sandbox, {
+      commit: true,
+      client: {
+        sandbox: 'ASnEfuNv0yvZqlCfPT6geLrWuQpYnjdBUcRi7eeUiOb5D3NEWyBAZDancLcLQPlIXNB1UG40JN2weX22'
+      },
+      button: {
+        label: 'paypal',
+      },
+      onPaymentComplete: (data, actions) => {
+        console.log('OnPaymentComplete');
+      },
+      onCancel: (data, actions) => {
+        console.log('OnCancel');
+      },
+      onError: (err) => {
+        console.log('OnError');
+      },
+      transactions: [{
+        amount: {
+          currency: 'EUR',
+          total: 12
+        }
+      }]
+    });
+  }
 }

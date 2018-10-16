@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxPayPalModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
